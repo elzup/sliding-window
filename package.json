@@ -1,6 +1,6 @@
 {
   "name": "sliding-window",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A TypeScript utility for creating sliding windows over arrays",
   "access": "public",
   "type": "module",
