@@ -15,16 +15,15 @@ $ npm install sliding-window
 ## Usage
 
 ```js
-import { windowed } from 'sliding-window'
-windowed([1, 2, 3, 4], 2)
+import { slidingWindow } from 'sliding-window'
+
+// Default window size is 2
+slidingWindow([1, 2, 3, 4])
 // [[1, 2], [2, 3], [3, 4]]
 
-// with size
-windowed([1, 2, 3, 4, 5, 6], 3)
-// [ [1, 2, 3],
-//   [2, 3, 4],
-//   [3, 4, 5],
-//   [4, 5, 6] ]
+// Custom window size
+slidingWindow([1, 2, 3, 4, 5, 6], 3)
+// [[1, 2, 3], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
 ```
 
 ## License
