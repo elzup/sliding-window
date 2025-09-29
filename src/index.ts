@@ -1,9 +1,7 @@
 function slidingWindow2<T>(a: readonly T[]): [T, T][] {
   if (a.length < 2) return []
 
-  const b = a.slice(1)
-
-  return b.map((_v, i) => [a[i], b[i]])
+  return a.slice(0, -1).map((v, i) => [v, a[i + 1]!])
 }
 
 export function slidingWindow<T>(a: readonly T[], n = 2): T[][] {

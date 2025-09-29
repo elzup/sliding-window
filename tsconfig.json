@@ -1,26 +1,25 @@
 {
   "compilerOptions": {
+    "target": "ES2018",
+    "module": "ESNext",
+    "lib": ["ES2018"],
+    "types": ["vitest/globals"],
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./lib",
+    "rootDir": "./src",
     "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "target": "es2020",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": false,
-    "noUncheckedIndexedAccess": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "outDir": "lib",
-    "baseUrl": ".",
-    "declaration": false,
-    "types": ["vitest/globals"],
-    "paths": {
-      "*": ["node_modules/*", "src/types/*"]
-    }
+    "moduleResolution": "node"
   },
   "include": ["src/**/*"],
-  "exclude": ["src/__test__/**/*", "vitest.config.ts", "lib"]
+  "exclude": ["node_modules", "lib", "**/*.test.ts", "**/*.spec.ts"]
 }

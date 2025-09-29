@@ -1,16 +1,28 @@
-/// <reference types="vitest" />
+/// <reference types="vitest/globals" />
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   test: {
     globals: true,
-    environment: 'node',
+    include: ['src/**/*.test.ts'],
     coverage: {
       provider: 'v8',
-      reporter: ['json-summary', 'text', 'lcov'],
+      reporter: ['text', 'lcov', 'html'],
       include: ['src/**/*.ts'],
-      exclude: ['src/**/*.test.ts', 'src/**/*.spec.ts'],
-    },
-    include: ['src/**/*.test.ts', 'src/**/*.spec.ts'],
-  },
+      exclude: [
+        'src/**/*.d.ts',
+        'src/__tests__/**',
+        'src/types.ts',
+        'lib/**',
+        'vitest.config.ts',
+        '**/*.config.ts'
+      ],
+      thresholds: {
+        branches: 100,
+        functions: 100,
+        lines: 100,
+        statements: 100
+      }
+    }
+  }
 })

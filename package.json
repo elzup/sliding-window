@@ -22,9 +22,9 @@
   "scripts": {
     "clean": "rm -rf lib",
     "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types",
-    "build:cjs": "tsc --module commonjs --outDir lib/cjs && echo '{\"type\": \"commonjs\"}' > lib/cjs/package.json",
-    "build:esm": "tsc --module esnext --outDir lib/esm --moduleResolution node --allowSyntheticDefaultImports",
-    "build:types": "tsc --declaration --emitDeclarationOnly --outDir lib/types",
+    "build:cjs": "tsc --project tsconfig.build.json --module commonjs --outDir lib/cjs && echo '{\"type\": \"commonjs\"}' > lib/cjs/package.json",
+    "build:esm": "tsc --project tsconfig.build.json --module esnext --outDir lib/esm --moduleResolution node --allowSyntheticDefaultImports",
+    "build:types": "tsc --project tsconfig.build.json --declaration --emitDeclarationOnly --outDir lib/types",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "test": "vitest run",
@@ -61,7 +61,7 @@
     "utils"
   ],
   "devDependencies": {
-    "@types/node": "22.18.1",
+    "@types/node": "^24.5.2",
     "@vitest/coverage-v8": "^2.1.2",
     "@vitest/ui": "^2.1.2",
     "husky": "8.0.3",
