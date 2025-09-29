@@ -1,8 +1,16 @@
 {
-  "extends": "@elzup/tsconfig",
   "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "module": "esnext",
     "target": "es2020",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
     "noUncheckedIndexedAccess": false,
     "noPropertyAccessFromIndexSignature": false,
     "outDir": "lib",

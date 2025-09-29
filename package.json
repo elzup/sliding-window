@@ -1,7 +1,7 @@
 {
-  "name": "TODO",
-  "version": "0.0.0",
-  "description": "TODO",
+  "name": "sliding-window",
+  "version": "1.0.0",
+  "description": "A TypeScript utility for creating sliding windows over arrays",
   "access": "public",
   "type": "module",
   "license": "MIT",
@@ -15,7 +15,7 @@
       "types": "./lib/types/index.d.ts"
     }
   },
-  "repository": "elzup/TODO",
+  "repository": "elzup/sliding-window",
   "engines": {
     "node": ">=18"
   },
@@ -54,11 +54,13 @@
     "lib/types"
   ],
   "keywords": [
-    "utils",
-    "personal"
+    "sliding-window",
+    "windowed",
+    "array",
+    "typescript",
+    "utils"
   ],
   "devDependencies": {
-    "@elzup/tsconfig": "1.1.0",
     "@types/node": "22.18.1",
     "@vitest/coverage-v8": "^2.1.2",
     "@vitest/ui": "^2.1.2",

@@ -1,11 +1,11 @@
-# TODO
+# sliding-window
 
-> TODO
+> A TypeScript utility for creating sliding windows over arrays
 
 ## Install
 
 ```
-$ npm install TODO
+$ npm install sliding-window
 ```
 
 ## Doc
@@ -15,12 +15,16 @@ $ npm install TODO
 ## Usage
 
 ```js
-const { hoge } = require('TODO')
+import { windowed } from 'sliding-window'
+windowed([1, 2, 3, 4], 2)
+// [[1, 2], [2, 3], [3, 4]]
 
-/* tree shaking */
-// const { hoge } = require('elzup/TODO/lib/hoge')
-
-hoge()
+// with size
+windowed([1, 2, 3, 4, 5, 6], 3)
+// [ [1, 2, 3],
+//   [2, 3, 4],
+//   [3, 4, 5],
+//   [4, 5, 6] ]
 ```
 
 ## License
