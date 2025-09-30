@@ -15,14 +15,14 @@ export default defineConfig({
         'src/types.ts',
         'lib/**',
         'vitest.config.ts',
-        '**/*.config.ts'
+        '**/*.config.ts',
       ],
       thresholds: {
         branches: 100,
         functions: 100,
         lines: 100,
-        statements: 100
-      }
-    }
-  }
+        statements: 100,
+      },
+    },
+  },
 })
