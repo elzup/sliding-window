@@ -68,7 +68,7 @@
     "lint-staged": "13.3.0",
     "oxlint": "^0.15.0",
     "tsd": "0.33.0",
-    "typescript": "5.9.2",
+    "typescript": "5.9.3",
     "unimported": "1.31.1",
     "vitest": "^2.1.2"
   },
