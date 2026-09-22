@@ -17,7 +17,7 @@
   },
   "repository": "elzup/sliding-window",
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "scripts": {
     "clean": "rm -rf lib",
