@@ -4,7 +4,7 @@ lib
 
 # Yarn PnP
 .pnp.*
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
+.yarn/*
+!.yarn/releases/
+!.yarn/releases/*.cjs
 .yarn/install-state.gz
