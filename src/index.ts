@@ -1,6 +1,4 @@
 function slidingWindow2<T>(a: readonly T[]): [T, T][] {
-  if (a.length < 2) return []
-
   return a.slice(0, -1).map((v, i) => [v, a[i + 1]!])
 }
 
